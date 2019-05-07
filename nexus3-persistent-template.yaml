@@ -5,7 +5,7 @@ labels:
 metadata:
   name: nexus3-persistent
   annotations:
-    description: Sonatype Nexus 3 persistent template
+    description: Sonatype Nexus 3 STIGD persistent template
     tags: ci,nexus
 objects:
 - apiVersion: v1
@@ -18,7 +18,7 @@ objects:
     tags:
     - from:
         kind: DockerImage
-        name: docker.io/sonatype/nexus3:${NEXUS_VERSION}
+        name: nexus-docker.52.61.140.4.nip.io/up/nexus-hardened:latest
       name: ${NEXUS_VERSION}
 - apiVersion: v1
   kind: DeploymentConfig
